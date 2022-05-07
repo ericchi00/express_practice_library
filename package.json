@@ -1,6 +1,9 @@
 {
 	"name": "express-local-library",
 	"version": "0.0.0",
+	"engines": {
+		"node": "16.13.2"
+	},
 	"private": true,
 	"type": "module",
 	"scripts": {
