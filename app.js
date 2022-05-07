@@ -13,10 +13,8 @@ import usersRouter from './routes/users.js';
 import compression from 'compression';
 import helmet from 'helmet';
 
-import MONGO_INFO from './mongodb.js';
-
 const app = express();
-const mongoDB = MONGO_INFO;
+const mongoDB = process.env.MONGODB_URI;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
